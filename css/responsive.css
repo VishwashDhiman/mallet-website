@@ -1224,7 +1224,9 @@
 	.accordion-box .block .acc-btn{
 		font-size:20px;
 	}
-	
+	.owl-carousel .owl-nav .owl-next{
+		display: none;
+	}
 	.sec-title .big-title,
 	.services-section-seven .title-box .big-text{
 		font-size:80px;
