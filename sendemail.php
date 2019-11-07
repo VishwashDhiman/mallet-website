@@ -1,32 +1,19 @@
-<?php
+<?php 
+if(isset($_POST['submit'])){
+    $to = "vishwash@thehousemonk.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
 
-// Define some constants
-define( "RECIPIENT_NAME", "John Doe" );
-define( "RECIPIENT_EMAIL", "youremail@mail.com" );
-
-
-// Read the form values
-$success = false;
-$userName = isset( $_POST['name'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['name'] ) : "";
-$senderEmail = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email'] ) : "";
-$userPhone = isset( $_POST['phone'] ) ? preg_replace( "/[^\s\S\.\-\_\@a-zA-Z0-9]/", "", $_POST['phone'] ) : "";
-$senderServices = isset( $_POST['services'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['services'] ) : "";
-$message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : "";
-
-// If all values exist, send the email
-if ( $userName && $senderEmail && $userPhone && $senderServices && $message) {
-  $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
-  $headers = "From: " . $userName . "";
-  $msgBody = " Email: ". $senderEmail . " Phone: ". $userPhone . " Services: ". $senderServices . " Message: " . $message . "";
-  $success = mail( $recipient, $headers, $msgBody );
-
-  //Set Location After Successsfull Submission
-  header('Location: index.html?message=Successfull');
-}
-
-else{
-	//Set Location After Unsuccesssfull Submission
-  	header('Location: contact.html?message=Failed');	
-}
-
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
 ?>
