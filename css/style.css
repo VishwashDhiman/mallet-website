@@ -228,6 +228,14 @@ img{
 	text-align:center;	
 }
 
+.title1 {
+	position: relative;
+    color: #e9c37a;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
 /*** 
 
 ====================================================================
@@ -2492,7 +2500,6 @@ img{
  
 .story-section{
 	position:relative;
-	padding-top:100px;
 }
 
 .story-section .pattern-layer-two{
@@ -3371,7 +3378,7 @@ img{
 
 .team-block{
 	position:relative;
-	margin-bottom:30px;
+	margin-bottom:10px;
 }
 
 .team-block .inner-box{
@@ -7836,7 +7843,7 @@ img{
 
 .page-title{
 	position:relative;
-	padding:110px 0px 70px  20px;
+	padding:80px 0px 70px  20px;
 	background-size:cover;
 	background-repeat:no-repeat;
 }
@@ -7877,7 +7884,7 @@ img{
 .page-title .page-breadcrumb{
 	position:relative;
 	color:rgba(255,255,255,0.70);
-	margin-top:90px;
+	margin-top:50px;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -8870,7 +8877,7 @@ img{
 
 .contact-info-section{
 	position:relative;
-	padding:60px 0px 90px;
+	padding:30px 0px 0px;
 }
 
 .contact-info-section.style-two{
