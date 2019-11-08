@@ -2610,9 +2610,11 @@ img{
 	position:relative;
 	padding:0px;
 	float:right;
+	/* margin-bottom:50px; */
+}
+.story-block .inner-box .clearfix{
 	margin-bottom:50px;
 }
-
 .story-block .inner-box .image-column .inner-column{
 	position:relative;
 	padding-top:45px;
@@ -9236,6 +9238,9 @@ img{
 	color:#e9c37a;
 }
 
+/* .clearfixs {
+	padding-bottom: 10px;
+} */
 /*Post Widget*/
 
 .sidebar .popular-posts .post{
